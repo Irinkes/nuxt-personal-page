@@ -23,9 +23,6 @@
   import AnimatedNumber from "animated-number-vue";
 	import {mapGetters} from 'vuex';
 
-
-
-
   export default {
 		components: {
 			Menu,
