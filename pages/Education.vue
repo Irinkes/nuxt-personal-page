@@ -12,7 +12,7 @@
       </transition>
 
         <ul class="list__year">
-            <li v-for="(value, key) in this.getEducation" :key="key" @click="showEducationText(value, key)" :class="{'activeYear': key === activeIndex}">
+            <li v-for="(value, key) in this.$store.state.educationList" :key="key" @click="showEducationText(value, key)" :class="{'activeYear': key === activeIndex}">
               {{key}}
             </li>
         </ul>
@@ -25,7 +25,6 @@
 
 <script>
 	import Menu from '~/components/Menu.vue';
-  import {mapGetters} from 'vuex';
 
 	export default {
 		components: {
@@ -51,9 +50,6 @@
         this.educationValue = value;
       }
     },
-    computed: {
-      ...mapGetters(['getEducation']),
-    }
 
 	}
 </script>
