@@ -12,7 +12,7 @@
       </transition>
 
         <ul class="list__year">
-            <li v-for="(value, key) in educationData" :key="key" @click="showEducationText(value, key)" :class="{'activeYear': key === activeIndex}">
+            <li v-for="(value, key) in this.getEducation" :key="key" @click="showEducationText(value, key)" :class="{'activeYear': key === activeIndex}">
               {{key}}
             </li>
         </ul>
@@ -25,8 +25,7 @@
 
 <script>
 	import Menu from '~/components/Menu.vue';
-	import WelcomeText from '~/components/WelcomeText.vue'
-  import axios from 'axios';
+  import {mapGetters} from 'vuex';
 
 	export default {
 		components: {
@@ -42,9 +41,7 @@
 	  },
 
 	  mounted() {
-		  axios
-			  .get('https://api.myjson.com/bins/s1k00')
-			  .then(response => (this.educationData = response.data[0]));
+      this.$store.dispatch('loadEducationList');
 	  },
 
     methods: {
@@ -54,11 +51,10 @@
         this.educationValue = value;
       }
     },
-    // computed: {
-		// 	randomNum(){
-		// 		return Math.floor(Math.random() * Math.floor(this.educationData.length));
-    //   }
-    // }
+    computed: {
+      ...mapGetters(['getEducation']),
+    }
+
 	}
 </script>
 
