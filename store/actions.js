@@ -9,3 +9,13 @@ export  const  loadEducationList = ({commit}) => {
         commit('loadEducationList', educationData);
       });
 }
+
+export  const  loadWorkList = ({commit}) => {
+  let workData = [];
+  axios
+    .get('https://api.myjson.com/bins/14m4mg')
+    .then(response => (workData = response.data[0]))
+    .then(response => {
+      commit('loadWorkList', workData);
+    });
+}

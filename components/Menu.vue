@@ -28,8 +28,6 @@
 	          { name: 'Education', url:'/Education' },
 	          { name: 'Experience', url:'/Experience' },
 	          { name: 'Work', url:'/Work' },
-	          { name: 'Blog', url:'/Blog' },
-	          { name: 'Contact', url:'/Contact' },
           ]
         }
     }

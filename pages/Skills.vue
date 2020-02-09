@@ -53,8 +53,6 @@
   }
 
   .container {
-    align-items: flex-start;
-
 
     &-content {
       flex: 1 0 auto;

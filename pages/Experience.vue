@@ -10,8 +10,6 @@
         :formatValue="formatTo"
         :duration="300"
       /> months</span></div>
-
-
     </div>
 
     <Menu></Menu>
@@ -64,8 +62,6 @@
   }
 
   .container {
-    align-items: flex-start;
-
 
     &-content {
       flex: 1 0 auto;

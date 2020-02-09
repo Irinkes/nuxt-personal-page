@@ -58,7 +58,6 @@
   .container {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     text-align: center;
 
     &-content {

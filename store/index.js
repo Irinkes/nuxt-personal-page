@@ -14,6 +14,7 @@ const store = () => new Vuex.Store({
       'html', 'css', 'javascript', 'vue', 'vuex', 'less', 'sass', 'jquery', 'bootstrap'
     ],
     educationList: [],
+    workList: []
   },
   actions,
   getters,
